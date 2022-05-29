@@ -8,12 +8,12 @@ import operator
 import os
 import sys
 
-json_file = open("C:/Users/Lenovo/Desktop/Real Time Hand Gesture Controlled Application/gesture-model.json", "r")
+json_file = open("gesture-model.json", "r")
 model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(model_json)
 # load weights into new model
-loaded_model.load_weights("C:/Users/Lenovo/Desktop/Real Time Hand Gesture Controlled Application/gesture-model.h5")
+loaded_model.load_weights("gesture-model.h5")
 print("Loaded model from disk")
 # Category dictionary
 categories = {0: 'palm', 1: 'fist', 2: 'thumbs-up', 3: 'thumbs-down', 4: 'index-right', 5: 'index-left', 6:'no-gesture'}
